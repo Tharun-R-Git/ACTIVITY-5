@@ -1,0 +1,328 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    width: 100%;
+    align-items: center;
+    background-color: palegreen;
+}
+
+#logo{
+    width: 150px;
+    height: 60px;
+    margin-left: 20px;
+}
+
+.login{
+    padding: 10px 20px;
+    background-color: darkgreen;
+    border-radius: 24px;
+    color: white;
+    width: 120px;
+    margin-right: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border: 2px solid palegreen;
+}
+
+.login:hover{
+    background-color: palegreen;
+    color: darkgreen;
+    border: 2px solid darkgreen;
+    font-weight: bold;
+}
+
+.nav-bar{
+    position: sticky;
+    top: 0;
+    height: 50px;
+    width: 100%;
+    background-color: rgb(41, 40, 40);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 90px;
+    z-index: 100;
+  
+}
+
+.nav-bar a{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: white;
+    font-size: 17px;
+    padding: 0px 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.nav-bar a:hover{
+    color: orange;
+}
+
+
+
+
+
+.score-board{
+    height: 180px;
+    width: 100%;
+    border-bottom: 2px solid lightgrey;
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.score-card{
+    height: 100%;
+    width: 330px;
+    border: 2px solid rgb(61, 111, 10);
+    border-radius: 10px;
+    
+}
+
+.score-card:hover{
+    background-color: lawngreen;
+}
+
+.score-head{
+    display: flex;
+    justify-content: space-between;
+    margin: 8px;
+}
+
+.desc{
+    padding-left: 6px;
+
+    color: rgb(57, 57, 57);
+    color: rgb(117, 3, 3);
+    font-size: 16px;
+    font-weight: 500;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+
+.type{
+    background-color: darkgreen;
+    height: fit-content;
+    padding: 0px 10px;
+    width: fit-content;
+    color: antiquewhite;
+    font-size: 15px;
+    border-radius: 10px;
+    
+}
+
+  
+.score-body{
+    display: flex;
+    flex-direction: column;
+}
+
+.team-container{
+    display: flex;
+    align-items: center;
+    padding-left: 3px;
+}
+
+.team-logo{
+    height: 20px;
+    width: 25px;
+    margin: 5px;
+    
+}
+
+.team-logo img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.team-name{
+    color: rgb(18, 18, 18);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.match-time p{
+    padding-left: 10px;
+    font-size: 16px;
+    color: rgb(17, 3, 30);
+}
+
+.series-wrapper {
+    overflow: hidden;
+    width: 100%;
+    height: fit-content;
+    padding: 20px 0px;
+    border-bottom: 2px solid rgb(76, 150, 3);
+    background-color: greenyellow;
+}
+
+.series {
+    display: flex;
+    width: 200%; /* Double the width to accommodate duplicate images */
+    animation: slide 20s linear infinite;
+    gap: 10px;
+}
+
+.series img {
+    width: 550px;
+    height: 100%;
+    border-radius: 20px;
+    border: 3px solid rgb(61, 120, 2);
+    box-shadow: 2px 2px 2px 1px rgb(49, 140, 42);
+
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* Half of the total width for continuous loop */
+    }
+}
+
+.series:hover {
+    animation-play-state: paused; /* Pause the animation on hover */
+}
+
+.score-bottom{
+    background-color: rgb(186, 186, 186);
+    height: 30px;
+    margin: 8px;
+    margin-top: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.score-bottom a{
+    color: rgb(0, 0, 54);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    
+}
+
+.score-bottom a:hover{
+    color: rgb(69, 0, 93);
+    font-weight: bold;    
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+  }
+  
+  /* Tooltip text */
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+   
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+.animation{
+    height: 1000px;
+    width: 100%;
+    background-color: greenyellow;
+}
+
+@keyframes scrolling-text {
+    0% {
+        transform: translateY(100%);
+      }
+      100% {
+        transform: translateY(-100%);
+      }
+}
+
+
+@keyframes scrolling-text-x {
+    0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+}
+
+.scrolling-news{
+    color: orange;
+    height: 40px;
+    font-size: 30px;
+    animation: scrolling-text 20s infinite linear;
+    background-color: rgb(25, 25, 25);
+    font-weight: bold;
+    text-decoration: double;
+    text-align: center;
+}
+
+.scrolling-news a{
+    color: orange;
+    font-weight: bold;
+    text-decoration:wavy;
+    text-align: center;
+
+}
+
+.scrolling-news-1{
+    color: orange;
+    height: 40px;
+    font-size: 30px;
+    animation: scrolling-text-x 20s infinite linear;
+    background-color: rgb(25, 25, 25);
+    font-weight: bold;
+    text-decoration: double;
+    text-align: center;
+    margin-top: 100px;
+    overflow: hidden;
+    width: 80%;
+}
+
+.news-updates 
+{
+  background-color: #333;
+  color: white;
+  text-align: right;
+  padding: 20px;
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 200px;
+  box-shadow: 10px 0 20px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.news-updates a{
+    color: orange;
+}
+
+.news-updates:hover 
+{
+  opacity: 1;
+}
